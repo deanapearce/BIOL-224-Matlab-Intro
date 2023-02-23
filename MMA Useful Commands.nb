@@ -1,0 +1,534 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     14307,        526]
+NotebookOptionsPosition[     10858,        405]
+NotebookOutlinePosition[     11942,        451]
+CellTagsIndexPosition[     11751,        441]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Useful commands in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"]
+}], "Title"],
+
+Cell["Bio 224H\tServedio 2016", "Subsubtitle",
+ CellChangeTimes->{
+  3.440773777480153*^9, {3.4724773201199512`*^9, 3.4724773207899*^9}, {
+   3.567168634733769*^9, 3.567168637254479*^9}, {3.693161531806513*^9, 
+   3.693161538373354*^9}}],
+
+Cell[TextData[{
+ "Try these commands.\n  \nFor more information on any of them, highlight it \
+and chose \"Find selected function\" under \"Help\".\n\nWhen you're done, hit \
+\"save\".  Keep this to refer to as you use ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "."
+}], "Subsubtitle"],
+
+Cell[CellGroupData[{
+
+Cell["Algebraic Commands (examples):", "Section"],
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   SuperscriptBox["x", "2"], "+", 
+   RowBox[{"2", " ", "x"}], "+", "1"}], "]"}]], "Input",
+ CellTags->"Simplify"],
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"a", "+", " ", "b"}], ")"}], "5"], "]"}]], "Input",
+ CellTags->"Expand"],
+
+Cell[BoxData[
+ RowBox[{"Factor", "[", 
+  RowBox[{
+   SuperscriptBox["x", "5"], "+", 
+   SuperscriptBox["x", "4"], "+", "x", "+", "1"}], "]"}]], "Input",
+ CellTags->"Factor"],
+
+Cell["Solve a single equation:", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     RowBox[{"2", "b", " ", "x"}], "+", "c"}], "==", "0"}], ",", "x"}], 
+  "]"}]], "Input",
+ CellTags->"Solve"],
+
+Cell["Solve a set of equations:", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "==", 
+      RowBox[{"1", "+", 
+       RowBox[{"2", " ", "a", " ", "y"}]}]}], ",", 
+     RowBox[{"y", "==", 
+      RowBox[{"9", "+", 
+       RowBox[{"2", " ", "x"}]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellTags->"Solve"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Matrices", "Section"],
+
+Cell["vector", "Text"],
+
+Cell[BoxData[
+ RowBox[{"table1", " ", "=", " ", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    SuperscriptBox["i", "2"], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}]], "Input",
+ CellTags->"Table"],
+
+Cell["matrix", "Text"],
+
+Cell[BoxData[
+ RowBox[{"matrix1", "=", " ", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["i", "2"], "j"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "10"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "5"}], "}"}]}], "]"}]}]], "Input",
+ CellTags->"Table"],
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", "matrix1", "]"}]], "Input"],
+
+Cell["element {2,3} of matrix1", "Text"],
+
+Cell[BoxData[
+ RowBox[{"matrix1", "[", 
+  RowBox[{"[", 
+   RowBox[{"2", ",", "3"}], "]"}], "]"}]], "Input"],
+
+Cell["Sum of elements 2 through 5 of table1", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{"table1", "[", 
+    RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", " ", "2", ",", " ", "5"}], "}"}]}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Numerical Computation", "Section"],
+
+Cell["numerical approximation:", "Text"],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"1.3", "/", "2"}], "]"}]], "Input",
+ CellTags->"Sum"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Calculus", "Section"],
+
+Cell["Derivative:", "Text"],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "3"], "y"}], "+", 
+    SuperscriptBox["x", "2"], "+", 
+    RowBox[{"2", " ", "x"}], "+", "1"}], ",", " ", "x"}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Programming", "Section"],
+
+Cell[TextData[{
+ "set up a table with dummy values (tell ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " how big you want the table to be:"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"table2", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], ";"}]], "Input"],
+
+Cell["fill the table", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"table2", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], " ", "=", " ", 
+    RowBox[{"i", " ", "+", " ", "2"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", " ", "10"}], "}"}]}], "]"}]], "Input"],
+
+Cell["look at what you got", "Text"],
+
+Cell[BoxData["table2"], "Input"],
+
+Cell["\<\
+Have mathematica change any cell that contains the number 5 to 500, otherwise \
+mutiply the values in the cell by 10.
+Commas separate commands in an if statement, and semicolons act like an \"and\
+\" statement, so that format is
+\tIf[this is true, then do this, otherwise do this; and this]\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"table2", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], " ", "\[Equal]", " ", "5"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"table2", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], " ", "=", " ", "500"}], ",", 
+     "\[IndentingNewLine]", " ", 
+     RowBox[{
+      RowBox[{"x", " ", "=", " ", 
+       RowBox[{
+        RowBox[{"table2", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "*", "10"}]}], ";", " ", 
+      RowBox[{
+       RowBox[{"table2", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], " ", "=", " ", "x"}]}]}], "]"}], 
+   "\[IndentingNewLine]", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", " ", "10"}], "}"}]}], "]"}]], "Input"],
+
+Cell["see what you got", "Text"],
+
+Cell[BoxData["table2"], "Input"],
+
+Cell["\<\
+print the first 4 values of the table
+ - this uses a For loop (note that the i++ isn\[CloseCurlyQuote]t evaluated \
+until after the body of the program, in this case the Print statement\
+\>", "Text",
+ CellChangeTimes->{{3.661784820837811*^9, 3.661784838709702*^9}}],
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", " ", 
+   RowBox[{"i", "<", "5"}], ",", 
+   RowBox[{"i", "++"}], ",", " ", 
+   RowBox[{"Print", "[", 
+    RowBox[{"table2", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.661784786571673*^9, 3.6617847910348177`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Plotting", "Section"],
+
+Cell["A 2-D plot:", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"y", " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox["z", "2"], "+", 
+    RowBox[{"2", " ", "z"}], "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox["m", "3"], "+", 
+    RowBox[{"2", " ", "m"}], "+", "1"}]}], ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"plot1", " ", "=", " ", 
+  RowBox[{"Plot", "[", 
+   RowBox[{"y", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "1", ",", "10"}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{"RGBColor", "[", 
+       RowBox[{"0", ",", "0", ",", "1"}], "]"}], "}"}]}]}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"plot2", " ", "=", " ", 
+  RowBox[{"Plot", "[", 
+   RowBox[{"k", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"m", ",", "1", ",", "10"}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{"RGBColor", "[", 
+       RowBox[{"1", ",", "0", ",", "0"}], "]"}], "}"}]}]}], "]"}]}]], "Input"],
+
+Cell["show both on the same scale", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"plot1", ",", " ", "plot2"}], "]"}]], "Input"],
+
+Cell["A 3-D plot", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["z", "2"], "m"}], "+", 
+    RowBox[{"2", " ", "z", " ", "m"}], "+", "1"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Plot3D", "[", 
+  RowBox[{"y", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"m", " ", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", "0", ",", " ", "10"}], "}"}]}], "]"}]], "Input"],
+
+Cell["manipulate", "Text",
+ CellChangeTimes->{{3.586022747927644*^9, 3.586022757693213*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["z", "2"], 
+       RowBox[{"(", 
+        RowBox[{"m", " ", "-", "s"}], ")"}]}], "+", 
+      RowBox[{"2", " ", "z", " ", "m"}], "  ", "+", "1"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"m", " ", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", " ", "0", ",", " ", "10"}], "}"}]}], "]"}], ",", " ", 
+   
+   RowBox[{"{", 
+    RowBox[{"s", ",", "0", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.586022803174885*^9, 3.5860228197490177`*^9}, {
+  3.5860230023111773`*^9, 3.586023021021634*^9}, {3.586023083489053*^9, 
+  3.5860231515962763`*^9}}],
+
+Cell["A plot from a list of numbers", "Text"],
+
+Cell[BoxData[
+ RowBox[{"table1", " ", "=", 
+  RowBox[{"{", " ", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "6", ",", "8", ",", "10"}], 
+   "}"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"table1", ",", 
+   RowBox[{"Joined", "\[Rule]", "True"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "+", "1"}], ")"}], "*", "y"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"z", "^", "2"}], "-", "1"}], ")"}], "^", "3"}], "-", 
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "*", 
+     RowBox[{"z", "^", "3"}]}], "-", 
+    RowBox[{"0.5", "*", 
+     RowBox[{"y", "^", "2"}], "*", 
+     RowBox[{"z", "^", "3"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1.5"}], ",", " ", "1.5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], " ", ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "2"}], "}"}], ",", "  ", 
+   RowBox[{"ColorFunction", "\[Rule]", "\"\<Rainbow\>\""}], ",", " ", 
+   RowBox[{"Mesh", "->", " ", "None"}], ",", " ", 
+   RowBox[{"Boxed", "\[Rule]", " ", "False"}], ",", " ", 
+   RowBox[{"Axes", "\[Rule]", " ", "None"}]}], "]"}]], "Input"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{972, 802},
+WindowMargins->{{Automatic, 244}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Simplify"->{
+  Cell[1281, 47, 166, 5, 33, "Input",
+   CellTags->"Simplify"]},
+ "Expand"->{
+  Cell[1450, 54, 158, 5, 33, "Input",
+   CellTags->"Expand"]},
+ "Factor"->{
+  Cell[1611, 61, 173, 5, 33, "Input",
+   CellTags->"Factor"]},
+ "Solve"->{
+  Cell[1830, 70, 222, 8, 33, "Input",
+   CellTags->"Solve"],
+  Cell[2099, 82, 373, 13, 27, "Input",
+   CellTags->"Solve"]},
+ "Table"->{
+  Cell[2564, 104, 218, 7, 33, "Input",
+   CellTags->"Table"],
+  Cell[2810, 115, 301, 10, 33, "Input",
+   CellTags->"Table"]},
+ "Sum"->{
+  Cell[3729, 154, 97, 3, 27, "Input",
+   CellTags->"Sum"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Simplify", 11167, 416},
+ {"Expand", 11245, 419},
+ {"Factor", 11321, 422},
+ {"Solve", 11396, 425},
+ {"Table", 11532, 430},
+ {"Sum", 11668, 435}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 100, 4, 77, "Title"],
+Cell[670, 28, 237, 4, 27, "Subsubtitle"],
+Cell[910, 34, 294, 7, 99, "Subsubtitle"],
+Cell[CellGroupData[{
+Cell[1229, 45, 49, 0, 68, "Section"],
+Cell[1281, 47, 166, 5, 33, "Input",
+ CellTags->"Simplify"],
+Cell[1450, 54, 158, 5, 33, "Input",
+ CellTags->"Expand"],
+Cell[1611, 61, 173, 5, 33, "Input",
+ CellTags->"Factor"],
+Cell[1787, 68, 40, 0, 26, "Text"],
+Cell[1830, 70, 222, 8, 33, "Input",
+ CellTags->"Solve"],
+Cell[2055, 80, 41, 0, 26, "Text"],
+Cell[2099, 82, 373, 13, 27, "Input",
+ CellTags->"Solve"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2509, 100, 27, 0, 38, "Section"],
+Cell[2539, 102, 22, 0, 26, "Text"],
+Cell[2564, 104, 218, 7, 33, "Input",
+ CellTags->"Table"],
+Cell[2785, 113, 22, 0, 26, "Text"],
+Cell[2810, 115, 301, 10, 33, "Input",
+ CellTags->"Table"],
+Cell[3114, 127, 68, 1, 27, "Input"],
+Cell[3185, 130, 40, 0, 26, "Text"],
+Cell[3228, 132, 107, 3, 27, "Input"],
+Cell[3338, 137, 53, 0, 26, "Text"],
+Cell[3394, 139, 212, 6, 27, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3643, 150, 40, 0, 38, "Section"],
+Cell[3686, 152, 40, 0, 26, "Text"],
+Cell[3729, 154, 97, 3, 27, "Input",
+ CellTags->"Sum"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3863, 162, 27, 0, 38, "Section"],
+Cell[3893, 164, 27, 0, 26, "Text"],
+Cell[3923, 166, 224, 7, 33, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4184, 178, 30, 0, 38, "Section"],
+Cell[4217, 180, 158, 5, 26, "Text"],
+Cell[4378, 187, 194, 6, 27, "Input"],
+Cell[4575, 195, 30, 0, 26, "Text"],
+Cell[4608, 197, 268, 8, 27, "Input"],
+Cell[4879, 207, 36, 0, 26, "Text"],
+Cell[4918, 209, 32, 0, 27, "Input"],
+Cell[4953, 211, 314, 6, 56, "Text"],
+Cell[5270, 219, 797, 23, 88, "Input"],
+Cell[6070, 244, 32, 0, 26, "Text"],
+Cell[6105, 246, 32, 0, 27, "Input"],
+Cell[6140, 248, 275, 5, 41, "Text"],
+Cell[6418, 255, 339, 9, 27, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6794, 269, 27, 0, 38, "Section"],
+Cell[6824, 271, 27, 0, 26, "Text"],
+Cell[6854, 273, 327, 10, 53, "Input"],
+Cell[7184, 285, 352, 9, 31, "Input"],
+Cell[7539, 296, 352, 9, 31, "Input"],
+Cell[7894, 307, 43, 0, 26, "Text"],
+Cell[7940, 309, 93, 2, 31, "Input"],
+Cell[8036, 313, 26, 0, 26, "Text"],
+Cell[8065, 315, 193, 6, 32, "Input"],
+Cell[8261, 323, 246, 6, 31, "Input"],
+Cell[8510, 331, 92, 1, 26, "Text"],
+Cell[8605, 334, 747, 20, 34, "Input"],
+Cell[9355, 356, 45, 0, 26, "Text"],
+Cell[9403, 358, 156, 4, 31, "Input"],
+Cell[9562, 364, 127, 3, 31, "Input"],
+Cell[9692, 369, 1138, 32, 51, "Input"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
